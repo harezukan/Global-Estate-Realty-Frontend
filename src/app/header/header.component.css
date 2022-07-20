@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+#menu {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+#menu .nav-cont {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(13, 44, 66, 0.8);
+    z-index: 100;
+}
+.top-bar-cust {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.top-bar-cust a,
+.top-bar-cust {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.top-bar-cust .mail-phone {
+    float: left;
+}
+
+.top-bar-cust .log-reg {
+    float: right;
+}
+.navbar-brand.mobile {
+    display: none;
+}
+.navbar-toggler {
+    color: #fff;
+}
+
+.user {
+    cursor: pointer;
+}
+.dropdown,
+.dropleft,
+.dropright,
+.dropup {
+    position: relative;
+}
+.nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    width: 100px;
+    text-align: center;
+    padding: 20px 0;
+    padding-bottom: 3px;
+    font-family: 'Montserrat', sans-serif;
+}
+.dropdown-menu {
+    border-radius: 0;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #fff;
+    background: #1a1a1a;
+    color: #fff
+}
+.nav-item .listings {
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    padding: 20px 0;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+.nav-item {
+    margin-top: 20px;
+}
+a.dropdown-item {
+    cursor: pointer;
+    color: #fff;
+}
+a.dropdown-item:hover {
+    background-color: #fff;
+    color: #000;
+}
+.size {
+    font-size: 21px;
+}
+
+.clickIcon {
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 1px solid #fff;
+}
+
+@media(max-width: 1199px) {
+    .navbar-brand.desktop {
+        display: none;
+    }
+    .navbar-brand.mobile {
+        display: block;
+        width: 250px;
+    }
+    .navbar-brand.mobile img{
+        max-width: 100%;
+    }
+}
+@media(max-width: 991px) {
+    .navbar-brand.mobile img{
+        width: 200px;
+    }
+}

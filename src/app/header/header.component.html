@@ -1,0 +1,64 @@
+
+<div id="menu">
+<div class="nav-cont">
+    <div class="top-bar-cust clearfix ">
+        <div class="container-fluid">
+            <div class="mail-phone">
+                <a href="tel:+38761532948">+38761532948</a> |
+                <a href="mailto:sales@globalestate.com"> sales@globalestate.com</a>
+            </div>
+            <div class="log-reg d-flex" >
+                <mat-icon  *ngIf="!userService.loggedUser.id" class="align-items-center mr-1 size">login</mat-icon>
+                <a routerLink="login" *ngIf="!userService.loggedUser.id">
+                    <i > Login | </i></a> 
+                <a routerLink="register" *ngIf="!userService.loggedUser.id">
+                    <i class="ml-1"> Register</i>
+                </a>
+                <div class="d-flex">
+                    <p (click)="goToUserProfile(userService.loggedUser.id)" class="d-flex align-items-center m-0 mr-2 user">{{userService.loggedUser.firstName}} {{userService.loggedUser.lastName}}</p>
+                    <mat-icon (click)="logout()" class="clickIcon" *ngIf="userService.loggedUser.id">power_settings_new</mat-icon>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand mobile" routerLink="#">
+            <img  src="../../assets/real_logo_gray-removebg-preview.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown2" aria-controls="navbarNavDropdown2" aria-expanded="false" aria-label="Toggle navigation">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown2">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/home">home</a>
+                </li>
+                <li class="nav-item dropdown" routerLinkActive="active">
+                    <a class="nav-link listings dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        listings</a>
+                    
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                        <a  *ngFor="let category of allCategory" class="dropdown-item nav-item "   (click)="productCategory(category.id)" >{{category.name}}</a>
+                       
+                    </div>
+                </li>
+                
+                
+                <a class="navbar-brand desktop" href="#">
+                    <img height="80px" src="../../assets/real_logo_gray-removebg-preview.png" alt="">
+                </a>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="about">about</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="contact-page">contact</a>
+                </li>
+                <li class="nav-item" *ngIf="userService.loggedUser.role === 'ADMIN'">
+                    <a class="nav-link" routerLinkActive="active" routerLink="admin-panel">Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</div>

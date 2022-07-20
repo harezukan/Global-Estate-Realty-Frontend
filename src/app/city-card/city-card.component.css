@@ -1,0 +1,80 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.comm{
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+}
+ 
+
+ .comm h2 {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.8vw;
+    width: 100%;
+    left: 0;
+    padding: 0 15px;
+
+}
+
+ .comm h2 span {
+    font-size: 26px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 3px;
+    color: #fff;
+    font-weight: bold;
+}
+
+  .comm p {
+    position: absolute;
+    bottom: 20%;
+    left: 0%;
+    color: #fff;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    
+    
+}
+
+.comm img,
+.comm p{
+    transition: 200ms ease-in-out;
+}
+
+.comm p{
+    opacity: 0;
+}
+
+.comm:hover p{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.comm:hover img.blur{
+   filter:blur(3px)
+}
+
+.list_img{
+    width: 300px;
+    height: 200px;
+}
+
+.new_member{
+    margin: 0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.modal-body a{
+    text-decoration: none;
+    color: rgba(13, 44, 66, 0.8);
+    font-size: 18px;
+}

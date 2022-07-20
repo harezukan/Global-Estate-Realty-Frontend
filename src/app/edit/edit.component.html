@@ -1,0 +1,77 @@
+<div class="background">
+  
+<div class="bg_title">
+  <h1>EDIT PRODUCT</h1>
+  </div>
+  
+<div class="d-flex justify-content-center wrapper ">
+<div class="product-form w-50 d-flex flex-row w-100 justify-content-center">
+    <div class="beginning-tavle col-sm-4">
+    <div class="form-group ">
+      <label class="form-label">Select Country</label>
+      <select  class="custom-select mb-3" id="inputGroupSelect01" [(ngModel)]="product.countryId" >
+        
+        <option  *ngFor="let country of allCountry" [value]="country.id">{{country.countryName}}</option>
+        
+      </select>
+    </div>
+      <label class="form-label">Select City</label>
+      <select class="custom-select mb-3" id="inputGroupSelect01" [ngModelOptions]="{standalone:true}" [(ngModel)]="product.cityId">
+        <option  *ngFor="let city of allCity" [value]="city.id">{{city.cityName}}</option>
+        
+      </select>
+      
+      <div class="mb-3 form-group">
+        <label class="form-label">Address</label>
+        <input   [(ngModel)]="product.address" type="text" class="form-control">
+      </div>
+        
+      <label class="form-label">Select Category</label>
+      <select class="custom-select mb-3" id="inputGroupSelect01" [ngModelOptions]="{standalone:true}"  [(ngModel)]="product.categoryId">
+        
+        <option  *ngFor="let category of allCategory" [value]="category.id">{{category.name}}</option>
+        
+      </select>
+
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input [ngModelOptions]="{standalone:true}"  [(ngModel)]="product.title" type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input [ngModelOptions]="{standalone:true}"  [(ngModel)]="product.price" type="number" class="form-control">
+      </div>
+        
+    </div>
+      <div class="continue_table col-sm-4">
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea [(ngModel)]="product.description"  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <label class="form-label"> Beds</label>
+      <select class="custom-select mb-3" id="inputGroupSelect01" [ngModelOptions]="{standalone:true}" [(ngModel)]="product.beds">
+        
+        <option [value]="1">1</option>
+        <option [value]="2">2</option>
+        <option [value]="3">3</option>
+        <option [value]="4">4</option>
+        <option [value]="5">5</option>
+        
+      </select>
+      <label class="form-label">Baths</label>
+      <select class="custom-select mb-3" id="inputGroupSelect01" [ngModelOptions]="{standalone:true}" [(ngModel)]="product.baths">
+        
+        <option [value]="1">1</option>
+        <option [value]="2">2</option>
+        <option [value]="3">3</option>
+        <option [value]="4">4</option>
+        <option [value]="5">5</option>
+      </select>
+    <button   (click)="editProduct(product)" class="button btn-add">Edit Product</button>
+      </div>
+
+</div>
+</div>
+</div>

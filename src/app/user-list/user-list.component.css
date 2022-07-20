@@ -1,0 +1,32 @@
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+h1,h2{
+    font-family: 'Oswald', sans-serif;
+}
+
+.bg_title{
+    background-color: #748a93;
+}
+
+h1{  
+    font-size: 35px;
+    padding: 20px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.table{
+    background-color:#dfdbdb; 
+    border-radius: 20px;
+}
+
+.table td, .table th{
+    border: 0;
+}
+
+

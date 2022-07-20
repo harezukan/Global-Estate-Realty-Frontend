@@ -1,0 +1,63 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.menu{
+    background-color:rgba(34,45,49,255);
+    height: 300px; 
+}
+.text-size{
+    font-size: 40px;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+.nav-tabs{
+    border: 0;
+}
+.admin{
+    background-color: #5b727a;   
+}
+.nav-link.active{
+    color: #000 !important;
+}
+
+.nav-tabs .nav-link{
+    border: 0;
+    text-decoration: none;
+    color:#fff;
+    text-align: center;
+}
+
+.col-sm-2{
+    padding: 0;
+}
+
+.nav-tabs h2{
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    
+    font-size: 25PX;
+}
+
+.col-sm-10{
+    padding: 0;
+}
+.admin-panel{
+    width: 100%;
+    margin: 0;
+}
+
+@media(min-width:1800px){
+    .admin{
+        min-height: 730px;
+    }
+}

@@ -1,0 +1,53 @@
+<section id="listingsProd">
+    <div class="wrapper clearfix listings">
+        <div class="container-fluid">
+                <div class="listing" (click)="detailsPage(product.id); openModal(template)">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-12 img-cont p-0">   
+                                <img class="list_img" *ngIf="product.image?.length > 0"  [src]="product.image[0]">
+                        </div>
+                        <div class="col-md-5 col-sm-12 padding" style="background: #fff;">
+                            <div class="row">
+                                <div class="col-9 info">
+                                    <h1>{{product.address}}</h1>
+                                
+                                    <p class="price">${{product.price}}</p>
+                                    <div class="bet-bath">
+                                        bed:
+                                        <span>{{product.beds}}</span> | bath:
+                                        <span>{{product.baths}}</span><br>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                        
+                    </div>
+                </div>
+            
+        
+    
+</section>
+
+<ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">To view this listing, please Register or Login:</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      
+       <a href="/login">LOGIN HERE</a>
+       <br><br>
+       <p class="new_member">New member?</p>
+       <a href="/register">REGISTER</a>
+
+      
+    </div>
+  </ng-template> 

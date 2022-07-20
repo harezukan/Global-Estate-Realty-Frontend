@@ -1,0 +1,42 @@
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-header h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.prodImg{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+}
+
+.info{
+    position: absolute;
+    bottom: 5px;
+    color: #fff;
+    padding: 0 15px;
+    text-shadow: 1px 1px 2px #000;
+}
+.figure{
+    position: relative;
+}
+.click_product{
+    cursor: pointer;
+}
+.new_member{
+    margin: 0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.modal-body a{
+    text-decoration: none;
+    color: rgba(13, 44, 66, 0.8);
+    font-size: 18px;
+}
+

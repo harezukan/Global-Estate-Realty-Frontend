@@ -1,0 +1,48 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+.bac_img{
+    background:url("https://i.ytimg.com/vi/Gt50EPvMzXc/maxresdefault.jpg");
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+.login-form{
+    padding: 20px;
+    height: auto;
+    width: 40%;
+    margin: auto;
+    background: hsla(0,0%,0%,0.40);
+    color: #fff;
+   border-radius: 15px;
+}
+.text-validation{
+    color: #e86464;
+    text-shadow: 1px 1px 2px #000;
+}
+.login-form h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.padding{
+    padding: 200px 0;
+}
+@media(max-width:1199px){
+    .login-form{
+        width: 50%;
+    }
+    .padding{
+        padding: 400px 0;
+    }
+}
+@media(max-width:575px){
+    .login-form{
+        width: 95%;
+    }
+    .padding{
+        padding: 50px 0;
+    }
+}

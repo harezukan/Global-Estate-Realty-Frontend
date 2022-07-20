@@ -1,0 +1,21 @@
+<div class="bac_img">
+  <div class="padding">
+<div class="login-form">
+  <h1>LOGIN FORM</h1>
+  <form (submit)="loginUser($event)">
+    <div class="mb-3 ">
+      <label  class="form-label">Email address</label>
+      <input [ngModelOptions]="{standalone:true}" [(ngModel)]="user.email" type="email" class="form-control" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input [ngModelOptions]="{standalone:true}" [(ngModel)]="user.password" type="password" class="form-control">
+      <p class="text-validation">{{validation_login}}</p>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+ </div>
+
+</div>

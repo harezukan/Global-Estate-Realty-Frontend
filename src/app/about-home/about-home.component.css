@@ -1,0 +1,47 @@
+
+
+#about1 .about-usrow {
+    background-position: center;
+    background-size: cover;
+}
+#about1 .about-us-image img{
+    padding: 0;
+    
+    
+}
+.img-responsive{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+ .about-us-text .btn-about button {
+   border: none;
+   background-color: rgba(13, 44, 66, 0.8);
+   color: #fff;
+   padding: 10px 20px;
+   margin-top: 10px;
+   
+}
+
+ .about-us-text .btn-about button:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+
+.about-global-estate{
+    width:80%;
+    font-size: 17px;
+    margin-top: 50px;
+    
+    
+}
+
+.about-global-estate p{
+  text-align: start;
+  line-height: 1.8;
+}
+    
+
+
+
+

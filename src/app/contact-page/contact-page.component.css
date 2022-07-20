@@ -1,0 +1,43 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3{
+    font-family: 'Montserrat', sans-serif;
+}
+.wrapper{
+   margin: 0 auto; 
+}
+
+.contact-text{
+    padding-left: 20px;
+}
+.contact-text h2{
+    font-size: 45px;
+    font-weight: 50;
+    margin-bottom: 40px;
+}
+
+.iconify{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.bg_color{
+    background-color:  rgba(13, 44, 66, 0.8);
+    color: #fff;
+}
+
+.title{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.message_response{
+    color: #28cc25;
+    font-size: 15px;
+    margin-top: 5px;
+}
+@media(max-width:1199px){
+    .contact-form{
+        margin-top: 50px;
+    }
+}

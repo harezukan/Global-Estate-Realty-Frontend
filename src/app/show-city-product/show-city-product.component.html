@@ -1,0 +1,36 @@
+<div class="product click_product" (click)="goToDetails(product.id); openModal(template)">
+  <div class="figure">
+    <img class="prodImg"  [src]="product.primaryImage" alt="">
+    <div class="info row">
+      <div class="col-sm-6 col-6">
+        <span>{{product.beds}} Bed / {{product.baths}} Bath</span>
+      </div>
+      <div class="col-sm-6 col-6 text-right">
+        <span class="span-right">{{product.price}}$</span>
+      </div>
+      <div class="col-sm-12 text-center">
+        <span class="prod_address">{{product.address}}, {{product.cityName}}</span>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">To view this listing, please Register or Login:</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <a href="/login">LOGIN HERE</a>
+    <br><br>
+    <p class="new_member">New member?</p>
+    <a href="/register">REGISTER</a>
+
+
+  </div>
+</ng-template>

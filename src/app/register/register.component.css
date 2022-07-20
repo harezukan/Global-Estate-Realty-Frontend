@@ -1,0 +1,50 @@
+.register{
+    padding: 20px;
+    height: auto;
+    width: 40%;
+    margin: auto;
+    background: hsla(0,0%,0%,0.40);
+    color: #fff;
+   border-radius: 15px;
+    
+}
+
+.wrapper{
+    padding: 100px 0;
+}
+
+
+.register h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bac_img{
+    background:url("https://i.ytimg.com/vi/Gt50EPvMzXc/maxresdefault.jpg");
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.text-validation{
+    color: #e86464;
+    text-shadow: 1px 1px 2px #000;
+}
+
+@media(max-width:1199px){
+    .wrapper{
+        padding: 200px 0;
+    }
+    .register{
+        width: 50%;
+    }
+}
+@media(max-width:575px){
+    .register{
+        width: 95%;
+    }
+    .wrapper{
+        padding: 100px 0;
+    }
+}

@@ -1,0 +1,35 @@
+<div class="background">
+  <div class="bg_title">
+  <h1>CONTACT</h1>
+  </div>
+  <div class="d-flex">
+
+<table class="table  container mt-5">
+    <thead>
+      <tr>
+        
+        <th scope="col">Full Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Message</th>
+        <th scope="col">Title</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor=" let contact of contactForm">
+        
+        <td>{{contact.fullName}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.phone}}</td>
+        <td>{{contact.message}}</td>
+        <td>{{contact.title}}</td>
+        <td> <button (click)="deleteContactForm(contact.id)" type="button" class="btn btn-danger">Delete</button></td>
+      </tr>
+      <tr>
+        
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>

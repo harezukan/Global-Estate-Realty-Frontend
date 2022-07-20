@@ -1,0 +1,89 @@
+<div  class="mt-5">
+  <div class="container ">
+    <div class="m-auto">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item" *ngFor="let image of product.image;let index=index;let isFirst=first"
+            [ngClass]="{active:isFirst}">
+            <img class="d-block  prod_img" *ngIf="product.image?.length > 0" [src]="image" alt="First slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="info-product">
+        <p class="price">${{product.price}}</p>
+        <span>{{product.beds}} bed</span>&nbsp; &nbsp;<span>{{product.baths}} bath</span> <br>
+        <span>{{product.address}}, {{product.cityName}}</span>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header d-flex " id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne">
+                <mat-icon class=" flex-direction-center house">house</mat-icon> <span class="size">Property
+                  Details</span>
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              {{product.description}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form  ">
+    <h1>Learn more about this property</h1>
+    <div class="row container m-auto">
+      <div class="forms col-xl-6 col-lg-12 p-5">
+        <p>Ask a question</p>
+        <input class="input_hidden" [value]="product.title" [(ngModel)]="product.title">
+         <form (submit)="saveContactForm(product)" [formGroup]="form">
+        <div class="mb-3">
+          <input placeholder="Full Name" type="text" class="form-control" formControlName="fullname" [(ngModel)]="product.fullName">
+          <div *ngIf="f['fullname'].touched && f['fullname'].invalid" class="alert alert-danger">
+            <div *ngIf="f['fullname'].errors && f['fullname'].errors['required']">This field is required.</div>
+            <div *ngIf="f['fullname'].errors && f['fullname'].errors['minlength']">FullName should be 2 character.  </div>
+        </div>
+        </div>
+        <div class="mb-3">
+          <input placeholder="Email" type="email" class="form-control" formControlName="email" [(ngModel)]="product.email">
+          <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+            <div *ngIf="f['email'].errors && f['email'].errors['required']">This field is required.</div>
+            <div *ngIf="f['email'].errors && f['email'].errors['email']">Please, enter valid email address.</div>
+        </div>
+        </div>
+        <div class="mb-3">
+          <input placeholder="Phone" type="number" class="form-control" formControlName="phone" [(ngModel)]="product.phone">
+          <div *ngIf="f['phone'].touched && f['phone'].invalid" class="alert alert-danger">
+            <div *ngIf="f['phone'].errors && f['phone'].errors['required']">This field is required.</div>
+            <div *ngIf="f['phone'].errors && f['phone'].errors['minlength']">Phone should be 11 characters.  </div>
+        </div>
+        </div>
+        <div class="form-group">
+          <textarea formControlName="message" placeholder="Write message here" class="form-control" id="exampleFormControlTextarea1" rows="3"
+            [(ngModel)]="product.message"></textarea>
+            <div *ngIf="f['message'].touched && f['message'].invalid" class="alert alert-danger">
+              <div *ngIf="f['message'].errors && f['message'].errors['required']">This field is required.</div>
+              <div *ngIf="f['message'].errors && f['message'].errors['minlength']">FullName should be 5 character.  </div>
+          </div>
+        </div>
+        <button  [disabled]="form.invalid" type="submit" class="btn btn-danger">Submit</button>
+          </form>
+      </div>
+      <div class="image p-0 col-xl-6 col-lg-12">
+        <img *ngIf="product.image?.length > 0" [src]=" product.image[0]" alt="">
+      </div>
+    </div>
+  </div>

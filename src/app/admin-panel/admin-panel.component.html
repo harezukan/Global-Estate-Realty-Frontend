@@ -1,0 +1,22 @@
+<div class="row flex-row admin-panel">
+  <div class="col-xl-2 col-lg-12 p-0 admin">
+    <ul class="nav nav-tabs flex-column">
+      <h2>ADMIN PANEL</h2>
+      <li class="nav-item mb-3 mt-4">
+        <a class="nav-link" routerLinkActive="active" routerLink="users">Users</a>
+      </li>
+      <li class="nav-item mb-4">
+        <a class="nav-link" routerLinkActive="active" routerLink="products">Products</a>
+      </li>
+      <li class="nav-item mb-4">
+        <a class="nav-link" routerLinkActive="active" routerLink="update_delete">Update/Delete</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLinkActive="active" routerLink="contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+  <div class=" col-xl-10 col-lg-12 p-0">
+    <router-outlet> </router-outlet>
+  </div>
+</div>
